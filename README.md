@@ -1,2 +1,2 @@
 # Globais
-App angular simulando microfrontend de Globais RM
+App angular simulando microfrontend de Globais RM.
