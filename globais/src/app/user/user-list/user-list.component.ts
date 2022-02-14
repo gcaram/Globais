@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PoDynamicViewField } from '@po-ui/ng-components';
+import { PoDynamicViewField, PoNavbarItem } from '@po-ui/ng-components';
 import { PoPageDynamicTableActions, PoPageDynamicTableCustomAction, PoPageDynamicTableCustomTableAction, PoPageDynamicTableField } from '@po-ui/ng-templates';
 
 @Component({
@@ -9,8 +9,25 @@ import { PoPageDynamicTableActions, PoPageDynamicTableCustomAction, PoPageDynami
 })
 export class UserListComponent implements OnInit {
 
+  public items: Array<PoNavbarItem> = [];
+
   ngOnInit(): void {
+    this.LoadItems();
   }
+
+  public LoadItems() {
+    this.items = [];
+
+    this.items.push({
+      label: 'Coligada',
+      link: "../company"
+    }, {
+      label: 'Usuários',
+      link: "../user"
+    }
+    );
+  }
+
   title: string = "Usuários";
   detailedUser: any;
   apiAddress: string = "https://po-sample-api.herokuapp.com/v1/people";
