@@ -15,8 +15,6 @@ export class UserListComponent implements OnInit {
     this.LoadItems();
   }
 
-  ngOnDestr
-
   public LoadItems() {
     this.items = [];
 
