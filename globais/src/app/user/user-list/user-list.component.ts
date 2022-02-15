@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PoDynamicViewField, PoNavbarItem } from '@po-ui/ng-components';
 import { PoPageDynamicTableActions, PoPageDynamicTableCustomAction, PoPageDynamicTableCustomTableAction, PoPageDynamicTableField } from '@po-ui/ng-templates';
 
@@ -7,12 +7,16 @@ import { PoPageDynamicTableActions, PoPageDynamicTableCustomAction, PoPageDynami
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']
 })
-export class UserListComponent implements OnInit {
+export class UserListComponent implements OnInit, OnDestroy {
 
   public items: Array<PoNavbarItem> = [];
 
   ngOnInit(): void {
     this.LoadItems();
+  }
+
+  ngOnDestroy(): void {
+    console.log('UserListComponent Method not implemented.');
   }
 
   public LoadItems() {
