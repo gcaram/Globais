@@ -30,7 +30,7 @@ module.exports = {
 
       // For remotes (please adjust)
       name: "mglb",
-      filename: "globais.js",
+      filename: "remoteEntry.js",
       exposes: {
         "./Module": "src/app/interop.module.ts",
       },
